@@ -43,8 +43,10 @@ const instance = basicLightbox.create(`
      />
     </div>
 `)
-
-    instance.show()
+     instance.element().addEventListener('click', () => {
+        instance.close();
+    });
+    instance.show();
 };
 
 
